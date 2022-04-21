@@ -1,0 +1,253 @@
+<!DOCTYPE HTML>
+<html>
+	<!--
+		@author Ben Poole, http://benpoole.com
+		Example HTML5 code for playing with the local WebKit (Opera too?) SQL database.
+		@see http://benpoole.com/weblog/201106222227
+	-->
+	<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Rekrutacja_2022!</title>
+	
+		<style type="text/css">
+		body {font-family: Helvetica, sans-serif; font-size: 100%; line-height: 1.4em}
+		input, button {width: 25em; font-size: 100%; padding: .25em}
+		</style>
+
+		<link rel="stylesheet" href="../index.css">
+		<link rel="stylesheet" href="tabela_Pracownikow.css">
+		<script type="text/javascript" src="jquery.js">
+		</script>
+		<script src="https://cdn.jsdelivr.net/npm/@jaames/iro@5"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+		</script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js">
+		</script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
+
+		</script>
+			
+		<script type="text/javascript">
+			window.addEventListener("load",function(){
+
+				var data = ["1","Wojtek","Paluszkiewicz","stażysta","1.07.2022","10"];
+				var html ="<table>";
+
+					for (var j=0;j<5;j++)
+					{
+						if(j%2 === 0)
+						{
+						html+="<tr class="  + "even"  + ">";
+
+						}
+						else{
+							html+="<tr class="  + "odd"  + ">";
+						}
+						for (var i=0;i<6;i++)
+							{
+								
+								if(i>0)
+								{
+									data[0]=j+2;
+								}
+							
+									html+='<th>'+data[i]+'</th>';
+
+							}
+					    html+="</tr>";
+						
+					}
+
+				html+="</table>"	
+
+				//
+				document.getElementById("tab_").innerHTML =html;
+
+			});
+
+			function change_color(color_one,color_two)
+			{
+				var data = ["1","Wojtek","Paluszkiewicz","stażysta","1.07.2022","10"];
+				var html =`<table class="table">`;
+				
+					
+					
+
+					for (var j=0;j<5;j++)
+					{
+						
+						for (var i=0;i<6;i++)
+							{
+								
+								if(i%2==0)
+								{
+									data[0]=j+2;
+									html+='<th style ='+"backgroundColor:"+color_one+'>';
+
+								}
+								else{
+									data[0]=j+2;
+									html+='<th style ='+'backgroundColor:'+color_two+'>'
+
+								}
+							
+									html+data[i]+'</th>';
+
+
+							}
+					    html+="</tr>";
+						
+					}
+
+				html+="</table>"	
+
+				//
+				document.getElementById("tab_").innerHTML =html;
+			}
+			
+		</script>
+	</head>
+
+	<body>
+	<div class="sidebar">
+	<ul>	
+	 <li>
+		<a href="../index.html">
+			<span class="text">Różne kontrolki </span>
+		</a>
+	</li>
+	<li>	
+	 <a href="../pracownicy/tabela_pracownikow.html">
+		<span class="text">Tabela Pracowników</span>
+	</a>
+	</li>
+	<li> 
+	 <a href="../faktury/faktury.html">
+		<span class="text">Tabela Faktur VAT</span>
+	</a>
+	</li>
+	<li> 
+	 <a href="../Kontrahenci/delegacje.html">
+		 <span class="text"> Tabela Delegacji BD</span>
+		</a>
+	</li> 
+	<li> 
+		<a href="../dane_k/dane.html">
+			<span class="text">Dane Kontrahentów</span>
+		   </a>
+	   </li> 
+	
+
+	</ul> 
+	</div>
+	<div class="page">
+		
+
+		<table id="DANE">
+		
+			<thead>
+			<tr>
+			  <th>Lp</th>	
+			  <th>Imie</th>
+			  <th>Nazwisko</th>
+			  <th>Stanowisko</th>
+			  <th>Data zatrudnienia</th>
+			  <th>Ilosc dni urlopowych</th>
+			</tr>
+			</thead>
+
+			<tbody id="tab_">
+
+			</tbody>
+		
+		</table>
+		
+		<br>
+
+		<body_>
+			<div style="text-align: center">
+				<input type="text" id="hex">
+				<input type="color" id="color">
+				<br>
+				<input type="text" id="hex2">
+				<input type="color" id="color2">
+		    </div>
+			
+		</body_>	
+	
+
+	</div>
+
+	</body>
+
+
+<script type= text/javascript>
+let colorInput = document.querySelector('#color');
+let hexInput = document.querySelector('#hex');
+let colorInputd = document.querySelector('#color2');
+let hexInputd = document.querySelector('#hex2');
+
+colorInput.addEventListener('input', () =>{
+	
+	
+
+	let color = colorInput.value;
+	hexInput.value = color
+	hexInput.style.backgroundColor = color;
+
+
+	let colord = colorInputd.value;
+	//let hexInputd.value = colord; -> blad 
+
+
+	let first = [...document.querySelectorAll('.even')]
+	first.forEach(el => {
+		el.style.backgroundColor = color
+	})
+	
+	
+
+
+
+// document.body.style.backgroundColor = color;
+	document.querySelector('h1').style.color = color;
+	document.querySelector('p').style.backgroundColor = color;
+	// document.querySelector('tr').style.backgroundColor = color;
+	document.p.style.backgroundColor=color;
+
+	change_color(color,color);
+
+});
+
+colorInputd.addEventListener('input', () =>{
+	
+
+	let color = colorInputd.value;
+	hexInputd.value = color
+	hexInputd.style.backgroundColor = color;
+
+
+	let colord = colorInputd.value;
+	//let hexInputd.value = colord; -> blad 
+
+	let second = [...document.querySelectorAll('.odd')]
+	second.forEach(el => {
+		el.style.backgroundColor = colord
+	})
+// document.body.style.backgroundColor = color;
+	document.querySelector('h1').style.color = color;
+	document.querySelector('p').style.backgroundColor = color;
+	// document.querySelector('tr').style.backgroundColor = color;
+	document.p.style.backgroundColor=color;
+
+	change_color(color,color);
+
+});
+
+
+
+
+</script>
+	
+</html>

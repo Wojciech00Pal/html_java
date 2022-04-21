@@ -1,0 +1,54 @@
+[{
+    "lp": "1",
+    "imie": "Adam",
+    "nazwisko": "Nowak",
+    "data_od": "2020-02-03",
+    "data_do": "2020-03-03",
+    "miejsce_wyjazdu": "Poznan",
+    "miejsce_przyjazdu": "Wroclaw"
+},
+{
+    "lp": "2",
+    "imie": "Adam",
+    "nazwisko": "Nowak",
+    "data_od": "2020-02-03",
+    "data_do": "2020-03-03",
+    "miejsce_wyjazdu": "Poznan",
+    "miejsce_przyjazdu": "Wroclaw"
+},
+{
+    "lp": "3",
+    "imie": "Adam",
+    "nazwisko": "Nowak",
+    "data_od": "2020-02-03",
+    "data_do": "2020-03-03",
+    "miejsce_wyjazdu": "Poznan",
+    "miejsce_przyjazdu": "Wroclaw"
+},
+{
+    "lp": "4",
+    "imie": "Adam",
+    "nazwisko": "Nowak",
+    "data_od": "2020-02-03",
+    "data_do": "2020-03-03",
+    "miejsce_wyjazdu": "Poznan",
+    "miejsce_przyjazdu": "Wroclaw"
+},
+{
+    "lp": "5",
+    "imie": "Adam",
+    "nazwisko": "Nowak",
+    "data_od": "2020-02-03",
+    "data_do": "2020-03-03",
+    "miejsce_wyjazdu": "Poznan",
+    "miejsce_przyjazdu": "Wroclaw"
+},
+{
+    "lp": "6",
+    "imie": "Adam",
+    "nazwisko": "Nowak",
+    "data_od": "2020-02-03",
+    "data_do": "2020-03-03",
+    "miejsce_wyjazdu": "Poznan",
+    "miejsce_przyjazdu": "Wroclaw"
+}]

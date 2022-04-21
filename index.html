@@ -1,0 +1,139 @@
+<!DOCTYPE HTML>
+<html>
+	<!--
+		@author Ben Poole, http://benpoole.com
+		Example HTML5 code for playing with the local WebKit (Opera too?) SQL database.
+		@see http://benpoole.com/weblog/201106222227
+	-->
+	<head>
+	<meta charset="UTF-8" />
+	<title>Rekrutacja_2022!</title>
+	
+		<style type="text/css">
+		body {font-family: Helvetica, sans-serif; font-size: 100%; line-height: 1.4em}
+		input, button {width: 25em; font-size: 100%; padding: .25em}
+		</style>
+
+		<link rel="stylesheet" href="index.css">
+		<script type="text/javascript" src="jquery.js">
+		</script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+		</script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js">
+		</script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
+		</script>
+			
+<script src="index.js">
+</script>
+	</head>
+
+	<body>
+	<div class="sidebar">
+	<ul>	
+	 <li>
+		<a href="index.html">
+			<span class="text">Różne kontrolki </span>
+		</a>
+	</li>
+	<li>	
+	 <a href="pracownicy/tabela_pracownikow.html">
+		<span class="text">Tabela Pracowników</span>
+	</a>
+	</li>
+	<li> 
+	 <a href="faktury/faktury.html">
+		<span class="text">Tabela Faktur VAT</span>
+	</a>
+	</li>
+	<li> 
+	 <a href="/Kontrahenci/delegacje.html">
+		 <span class="text"> Tabela Delegacji BD</span>
+		</a>
+	</li> 
+	<li> 
+		<a href="/dane_k/dane.html">
+			<span class="text">Dane Kontrahentów</span>
+		   </a>
+	   </li> 
+	</ul> 
+	</div>
+	<div class="page">
+		<div form id="center">
+			<h1>Wprowadź dane do tabeli</h1>
+		<input type="text" id="NIP" placeholder="Enter nip">
+		<br>
+		
+			<input type="number" id="REGION" placeholder="Enter region">
+		<br>
+		
+			<input type="text" id="NAZWA" placeholder="Enter nazwa ">
+			<div class="data">
+			<p>Data powstania:</p>
+			<input type="date" id="Data powstania" placeholder="Enter data powstania">
+			</div>
+	
+			<input type="text" id="Ulica" placeholder="Enter Ulica">
+		<br>
+
+			<input type="text" id="Numer DOMU" placeholder="Enter nr.domu">
+		<br>
+
+			<input type="text" id="Numer mieszkania" placeholder="Enter nr.mieszkania">
+		<br>
+
+	    <textarea id="Uwagi" placeholder="Uwagi"></textarea>
+		<br>
+	
+		<label for="KOLOR">Kolory</label>
+		<select id="KOLOR">
+		  <option value="GREEN">zielony</option>
+		  <option value="BLUE">niebieski</option>
+		  <option value="GREY">szary</option>
+		  <option value="TURQUOISE">turkusowy</option>
+		  <option value="NAVY">granatowy</option>
+		  <option value="RED">czerwony</option>
+		  <option value="WHITE">bialy</option>
+		</select>
+	
+		<label for="VAT">Vat</label>
+		<select id="VAT">
+		  <option value="ZW">zw</option>
+		  <option value="NP.">np.</option>
+		  <option value="0">0%</option>
+		  <option value="3">3%</option>
+		  <option value="8">8%</option>
+		  <option value="23">23%</option>
+		  </select>
+		<br><br>
+		<button class="button_my" id="addBtn" type="button">Confirm</button>
+        <br>
+
+		<table id="DANE">
+			<thead>
+			<tr>
+			  <th>Index</th>	
+			  <th>NIP</th>
+			  <th>Region</th>
+			  <th>Nazwa</th>
+			  <th>Ulica</th>
+			  <th>Numer Domu</th>
+			  <th>Numer mieszkania</th>
+			  <th>Kolory</th>
+			  <th>VAT</th>
+			  <th>Uwagi</th>
+			</tr>
+			</thead>
+			<tbody id="tbody">
+                
+			</tbody>
+		</table>
+		
+		
+	
+	</div>
+	
+		
+	</body>
+	
+</html>

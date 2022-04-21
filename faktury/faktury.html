@@ -1,0 +1,140 @@
+<!DOCTYPE HTML>
+<html>
+	<!--
+		@author Ben Poole, http://benpoole.com
+		Example HTML5 code for playing with the local WebKit (Opera too?) SQL database.
+		@see http://benpoole.com/weblog/201106222227
+	-->
+	<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Rekrutacja_2022!</title>
+	
+		<style type="text/css">
+		body {font-family: Helvetica, sans-serif; font-size: 100%; line-height: 1.4em}
+		input, button {width: 25em; font-size: 100%; padding: .25em}
+		</style>
+
+		<link rel="stylesheet" href="../index.css">
+
+		<script type="text/javascript" src="jquery.js">
+		</script>
+		<script src="https://cdn.jsdelivr.net/npm/@jaames/iro@5"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+		</script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js">
+		</script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
+		</script>
+			
+	
+	</head>
+
+	<body>
+	<div class="sidebar">
+	<ul>	
+	 <li>
+		<a href="../index.html">
+			<span class="text">Różne kontrolki </span>
+		</a>
+	</li>
+	<li>	
+	 <a href="../pracownicy/tabela_pracownikow.html">
+		<span class="text">Tabela Pracowników</span>
+	</a>
+	</li>
+	<li> 
+	 <a href="../faktury/faktury.html">
+		<span class="text">Tabela Faktur VAT</span>
+	</a>
+	</li>
+	<li> 
+	 <a href="../Kontrahenci/delegacje.html">
+		 <span class="text"> Tabela Delegacji BD</span>
+		</a>
+	</li> 
+	<li> 
+		<a href="../dane_k/dane.html">
+			<span class="text">Dane Kontrahentów</span>
+		   </a>
+	   </li> 
+	
+
+	</ul> 
+	</div>
+	<div class="page">
+		
+
+		<table id="Faktury">
+		
+		
+			<tr id="tytul">
+			  <th>Lp</th>	
+			  <th>opis</th>
+			  <th>MPK</th>
+			  <th>Kwota netto</th>
+			  <th>Ilość</th>
+			  <th>VAT</th>
+			  <th>Kwota brutto</th>
+			  <th>Wartość netto</th>
+			  <th>Wartość brutto</th>
+			</tr>
+
+			<tbody id="tab_">
+				<tr id="first">
+					<th>1</th>
+					<th>Makaron</th>
+					<th>POZNAN</th>
+					<th id="kwota_netto1"></th>
+					<th><input id="ile1" type="number" min="0"  value="0"></th>
+					<th><select id="VAT1"   value="5" >
+						<option>
+							<option value="5">5</option>
+							<option value="8">8</option>
+							<option value="23">23</option>
+						</option>
+						</select>
+					</th>
+					<th id="k_brutto1"></th>
+					<th id="w_netto1"></th>
+					<th id="w_brutto1"></th>
+				</tr>
+
+				<tr id="second">
+					<th>2</th>
+					<th>Kaczki</th>
+					<th>POZNAN</th>
+					<th id="kwota_netto2"></th>
+					<th><input id="ile2" type="number" min="0" value="0"></th>
+					<th><select id="VAT2"  value="5" >
+						<option>
+							<option value="5">5</option>
+							<option value="8">8</option>
+							<option value="23">23</option>
+						</option>
+						</select>
+					</th>
+					<th id="k_brutto2" ></th>
+					<th id="w_netto2"></th>
+					<th id="w_brutto2"></th>
+				</tr>
+			</tbody>
+		
+		</table>
+		<br>
+		<button id="addBtn">1000</button>
+		
+		<br>
+
+	
+	
+
+	</div>
+
+	</body>
+
+
+<script src="faktury.js">	
+</script>
+	
+</html>
